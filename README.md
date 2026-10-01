@@ -1,12 +1,8 @@
-# The Legend of Grok
+# Hermy and Champo's Norse Adventure
 
-Norse side-scrolling platformer.
+Norse side-scrolling platformer. Midgard, the eight realms, bosses, quests, mounts, and free-for-all arenas.
 
 ```bash
 npm install
 npm run dev
 ```
-
-The app serves on port 8080.
-
-Binary game art under `public/assets` (sprite sheets, maps) is not included in this push. Local database files, auth secrets, and `node_modules` are excluded.

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Hermy & Champo's Norse Adventure",
+      "hasCanvas": false,
+      "bodyTextLen": 17,
+      "bodyTextHash": "cc1d27db3b6d49f69224aa9b1712d90980902320475b3b55ce551640fd103144",
+      "bodyTextPrefix": "Waking the world…",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Hermy & Champo's Norse Adventure",
+      "hasCanvas": false,
+      "bodyTextLen": 20,
+      "bodyTextHash": "7de14e88a4abab372225b7f5aa1d18299da1ef24f9433bfae1bb5ce2e81cc83f",
+      "bodyTextPrefix": "Begin Your Adventure",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

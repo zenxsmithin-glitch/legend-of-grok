@@ -1,15 +1,63 @@
-export type HeroId = "hermy" | "champo" | "tanya" | "trizzle" | "luna" | "ezekiel";
+export type HeroId = "hermy" | "champo" | "tanya" | "trizzle" | "luna" | "ezekiel" | "yeti";
 export type Stance = "peace" | "lethal";
 export type StatKey = "str" | "agi" | "vit" | "int" | "dex" | "luck";
-export type EquipSlot = "weapon" | "head" | "body" | "legs" | "acc";
+export type EquipSlot =
+  | "weapon"
+  | "head"
+  | "body"
+  | "legs"
+  | "ring"
+  | "belt"
+  | "earring"
+  | "bracelet"
+  | "neck"
+  | "charm"
+  | "card"
+  | "mount";
 
 export type ItemInst = {
   uid: string;
   id: string;
   charges?: number;
+  qty?: number;
+  bag?: boolean;
+  bound?: boolean;
+  skin?: string;
+  plus?: number;
 };
 
-export type Equip = Partial<Record<EquipSlot, ItemInst>>;
+export type Equip = Partial<Record<EquipSlot | "acc", ItemInst>>;
+
+export type QuestProgress = {
+  step: number;
+  kills: number;
+  accepted: boolean;
+  repeat: number;
+};
+
+export type GroundDrop = {
+  id: string;
+  x: number;
+  y: number;
+  gold: number;
+  items: ItemInst[];
+  claimId: string | null;
+  publicAt: number;
+  local?: boolean;
+  kind?: "monster" | "player" | "boss";
+  born?: number;
+};
+
+export type Peer = {
+  id: string;
+  name: string;
+  hero: HeroId;
+  x: number;
+  y: number;
+  pose: string;
+  facing: number;
+  criminal: boolean;
+};
 
 export type SaveState = {
   name: string;
@@ -36,26 +84,9 @@ export type SaveState = {
   map: string;
   x: number;
   y: number;
-};
-
-export type Peer = {
-  id: string;
-  name: string;
-  hero: HeroId;
-  x: number;
-  y: number;
-  pose: string;
-  facing: number;
-  criminal: boolean;
-};
-
-export type GroundDrop = {
-  id: string;
-  x: number;
-  y: number;
-  gold: number;
-  items: ItemInst[];
-  claimId: string | null;
-  publicAt: number;
-  local: boolean;
+  quest?: QuestProgress;
+  reborn?: number;
+  soulAt?: number;
+  mounted?: boolean;
+  guildBonus?: number;
 };
